@@ -1,18 +1,25 @@
-from django.http import HttpResponse
+import json
+from urllib import response
+from django.http import HttpResponse, HttpResponseBadRequest
 
 def index(request):
-    hypotenuse = 5
-    opposite = ""
-    adjacent = 3
+    body = json.loads(request.body)
 
-    if hypotenuse == "":
-        hypotenuse = (opposite * opposite + adjacent * adjacent) ** (1 / 2)
+    hypotenuse = float(body["hypotenuse"])
+    opposite = float(body["opposite"])
+    adjacent = float(body["adjacent"])
+
+    if not hypotenuse and opposite and adjacent:
+        hypotenuse = ((opposite ** 2) + (adjacent ** 2)) ** 0.5
         return HttpResponse(hypotenuse)
 
-    elif opposite == "":
-        opposite = (hypotenuse * hypotenuse - adjacent * adjacent) ** (1 / 2)
+    elif not opposite and hypotenuse and adjacent:
+        opposite = ((hypotenuse ** 2) - (adjacent ** 2)) ** 0.5
         return HttpResponse(opposite)
 
-    elif adjacent == "":
-        adjacent = (hypotenuse * hypotenuse - opposite * opposite) ** (1 / 2)
+    elif not adjacent and hypotenuse and opposite:
+        adjacent = ((hypotenuse ** 2) - (opposite ** 2)) ** 0.5
         return HttpResponse(adjacent)
+
+    else: 
+        return HttpResponseBadRequest()
