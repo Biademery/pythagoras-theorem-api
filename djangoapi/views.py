@@ -1,5 +1,4 @@
 import json
-from urllib import response
 from django.http import HttpResponse, HttpResponseBadRequest
 
 def index(request):
