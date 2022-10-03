@@ -5,6 +5,9 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt 
 def index(request):
+    if request.method == 'GET':
+        return HttpResponseBadRequest("GET method not allowed")
+
     body = json.loads(request.body)
 
     hypotenuse = float(body["hypotenuse"])
