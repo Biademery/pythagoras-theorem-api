@@ -27,6 +27,7 @@ Esse projeto foi construido usando as seguintes tecnologias:
 - [Python](https://www.python.org/)
 - [Django](https://www.djangoproject.com/)
 - [Rest framework](https://www.django-rest-framework.org/)
+
 ## ▶️ Instalando
 
 É necessário ter o Git e Python 3.10.x.
@@ -44,6 +45,7 @@ python3 -m venv venv
 ```
 
 3. Ative o virtual environment:
+
 ```sh
 source venv/bin/activate
 ```
@@ -61,6 +63,28 @@ python3 manage.py runserver
 ```
 
 6. O servidor estará rodando no endereço ` http://127.0.0.1:8000/`
+
+## 🏁 Endpoint
+
+| Method | Path | Description                                |
+| :----- | :--- | :----------------------------------------- |
+| `POST` | ` /` | Retorna o resultado do cálculo do teorema. |
+
+**Exemplo de requisição com o body em `json`**:
+
+```json
+{
+  "hypotenuse": 5,
+  "opposite": 4,
+  "adjacent": 0 // Passe 0 para o lado que deseja calcular
+}
+```
+
+**Exemplo de resposta**:
+
+```json
+3.0
+```
 
 ## 📝 Licença
 
