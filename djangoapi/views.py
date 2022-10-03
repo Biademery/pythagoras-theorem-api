@@ -1,6 +1,9 @@
 import json
+from urllib import response
 from django.http import HttpResponse, HttpResponseBadRequest
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt 
 def index(request):
     body = json.loads(request.body)
 
