@@ -3,11 +3,11 @@
 <h1 align="center">Teorema de Pitágoras API</h1>
 
 <p align="center">
-  <a href="#-project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#%EF%B8%8F-running">Instalando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#%EF%B8%8F-instalando">Instalando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <!-- <a href="#-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;   -->
-  <a href="#-license">Licença</a>
+  <a href="#-licença">Licença</a>
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@ Esse projeto foi construido usando as seguintes tecnologias:
 - [Rest framework](https://www.django-rest-framework.org/)
 ## ▶️ Instalando
 
-É necessário ter o Git, Python3.
+É necessário ter o Git e Python 3.10.x.
 
 1. Clone este repositório
 
@@ -43,19 +43,24 @@ git clone https://github.com/Biademery/pythagoras-theorem-api
 python3 -m venv venv
 ```
 
-3. Instale todas as dependências:
+3. Ative o virtual environment:
+```sh
+source venv/bin/activate
+```
+
+4. Instale todas as dependências:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-4. Rode o servidor:
+5. Rode o servidor:
 
 ```sh
 python3 manage.py runserver
 ```
 
-5. O servidor está rodando no ` http://127.0.0.1:8000/`
+6. O servidor estará rodando no endereço ` http://127.0.0.1:8000/`
 
 ## 📝 Licença
 
