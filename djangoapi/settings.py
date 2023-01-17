@@ -16,7 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS=['*']
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['https://pythagoras-theorem-api-biademery.vercel.app/']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5500']
 
 # Application definition
 
