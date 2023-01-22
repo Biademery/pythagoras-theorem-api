@@ -57,13 +57,19 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. Rode o servidor:
+6. Migrate para ver se tudo instalou corretamente:
+
+```sh
+python3 manage.py migrate
+```
+
+6. Rode o servidor:
 
 ```sh
 python3 manage.py runserver
 ```
 
-6. O servidor estará rodando no endereço ` http://127.0.0.1:8000/`
+7. O servidor estará rodando no endereço ` http://127.0.0.1:8000/`
 
 ## 🏁 Endpoint
 
